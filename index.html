@@ -532,11 +532,81 @@ header h2 {
 }
     
     .contact-card {
-      background: linear-gradient(135deg, #ffffff, #eff6ff);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 28px;
-    }
+  background: linear-gradient(135deg, #ffffff, #eff6ff);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 34px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.contact-highlight {
+  background: #0f172a;
+  color: white;
+  padding: 26px;
+  border-radius: 18px;
+}
+
+.contact-highlight h3 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  color: white;
+}
+
+.contact-highlight p {
+  color: #cbd5e1;
+  margin-bottom: 0;
+}
+
+.contact-details {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-item {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.contact-item strong {
+  display: block;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 11px 15px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.contact-button.secondary-contact {
+  background: #e0f2fe;
+  color: #075985;
+}
+
+.contact-button:hover {
+  opacity: 0.9;
+}
 
     footer {
       background: var(--primary);
@@ -559,6 +629,18 @@ header h2 {
       header h2 {
         font-size: 20px;
       }
+
+      .contact-grid {
+  grid-template-columns: 1fr;
+}
+
+.contact-actions {
+  flex-direction: column;
+}
+
+.contact-button {
+  text-align: center;
+}
 
       .two-column {
         grid-template-columns: 1fr;
@@ -1300,20 +1382,63 @@ header h2 {
     </div>
   </section>
 
-  <section id="contact">
-    <div class="section-title">
-      <h2>Contact</h2>
-      <p>I am open to Senior Technical Writer, Lead Technical Writer, Information Developer, Documentation Engineer, API Writer, Cloud Documentation Writer, and UX Writer roles.</p>
-    </div>
+ <section id="contact">
+  <div class="section-title">
+    <h2>Contact</h2>
+    <p>
+      I am open to senior documentation roles where I can combine technical writing,
+      product understanding, documentation engineering, and content strategy.
+    </p>
+  </div>
 
-    <div class="contact-card">
-      <p><strong>Location Preference:</strong> Bengaluru / Chennai / Remote</p>
-      <p><strong>Portfolio Repository:</strong> <a href="https://github.com/Jansirani-vijayan/technical-writing-portfolio" target="_blank">GitHub Technical Writing Samples</a></p>
-      <p><strong>Resume:</strong> <a href="Jansirani_V_Resume.pdf" target="_blank">View Resume</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jansirani-vijayan-6b5756aa/" target="_blank">LinkedIn Profile</a></p>
-      <p><strong>Email:</strong> <a href="mailto:jansiranivijayan@gmail.com">jansiranivijayan@gmail.com</a></p>
+  <div class="contact-card">
+    <div class="contact-grid">
+
+      <div class="contact-highlight">
+        <h3>Let’s connect</h3>
+        <p>
+          I am exploring Senior Technical Writer, Lead Technical Writer, Information Developer,
+          Documentation Engineer, API Writer, Cloud Documentation Writer, Technical Publications,
+          and UX Writer roles for technical products.
+        </p>
+
+        <div class="contact-actions">
+          <a class="contact-button" href="mailto:jansiranivijayan@gmail.com">Email Me</a>
+          <a class="contact-button secondary-contact" href="https://www.linkedin.com/in/jansirani-vijayan-6b5756aa/" target="_blank">LinkedIn</a>
+          <a class="contact-button secondary-contact" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio" target="_blank">GitHub Portfolio</a>
+        </div>
+      </div>
+
+      <div class="contact-details">
+        <div class="contact-item">
+          <strong>Location Preference</strong>
+          Bengaluru / Chennai / Remote
+        </div>
+
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:jansiranivijayan@gmail.com">jansiranivijayan@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <strong>LinkedIn</strong>
+          <a href="https://www.linkedin.com/in/jansirani-vijayan-6b5756aa/" target="_blank">View LinkedIn Profile</a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Portfolio Repository</strong>
+          <a href="https://github.com/Jansirani-vijayan/technical-writing-portfolio" target="_blank">View GitHub Writing Samples</a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Resume</strong>
+          <a href="Jansirani_V_Resume.pdf" target="_blank">View Resume</a>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <footer>
     <p>© 2026 Jansirani V | Technical Writing Portfolio</p>
