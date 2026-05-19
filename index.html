@@ -4,108 +4,300 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jansirani V | Technical Writing Portfolio</title>
+
   <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #1e293b;
+      --accent: #2563eb;
+      --accent-light: #dbeafe;
+      --text: #1f2937;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      background: #f7f9fc;
-      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
     }
 
     header {
-      background: #1f2937;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
       color: white;
-      padding: 60px 20px;
-      text-align: center;
+      padding: 90px 24px 70px;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 18px;
+      color: #dbeafe;
     }
 
     header h1 {
       margin: 0;
-      font-size: 42px;
+      font-size: 50px;
+      line-height: 1.1;
+      letter-spacing: -1px;
     }
 
-    header p {
-      font-size: 20px;
-      margin-top: 10px;
-      color: #d1d5db;
+    header h2 {
+      margin: 16px 0 0;
+      font-size: 24px;
+      font-weight: 500;
+      color: #dbeafe;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin-top: 24px;
+      font-size: 18px;
+      color: #e5e7eb;
+    }
+
+    .hero-buttons {
+      margin-top: 32px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid transparent;
+    }
+
+    .button.primary {
+      background: white;
+      color: #1e3a8a;
+    }
+
+    .button.secondary {
+      border-color: rgba(255, 255, 255, 0.5);
+      color: white;
+    }
+
+    .button.card-button {
+      background: var(--accent);
+      color: white;
+      margin-top: 8px;
     }
 
     nav {
-      background: white;
-      padding: 15px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
+      background: rgba(255, 255, 255, 0.96);
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
+      z-index: 10;
+      text-align: center;
+      backdrop-filter: blur(8px);
     }
 
     nav a {
       margin: 0 12px;
-      color: #1f2937;
+      color: var(--secondary);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
+      font-size: 14px;
     }
 
     nav a:hover {
-      color: #2563eb;
+      color: var(--accent);
     }
 
     section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 58px 24px;
     }
 
-    h2 {
-      color: #111827;
-      font-size: 30px;
-      margin-bottom: 20px;
+    .section-title {
+      margin-bottom: 28px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      margin: 0;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      margin-top: 8px;
+      max-width: 780px;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: start;
     }
 
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      gap: 22px;
     }
 
     .card {
-      background: white;
+      background: var(--card);
+      border: 1px solid var(--border);
       padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-radius: 16px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
     }
 
     .card h3 {
-      margin-top: 0;
-      color: #1f2937;
+      margin: 0 0 10px;
+      color: var(--primary);
+      font-size: 20px;
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 16px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
+    .card p {
+      margin: 0 0 14px;
+      color: var(--text);
     }
 
-    .button:hover {
-      background: #1d4ed8;
+    .pill-list {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .pill {
+      background: var(--accent-light);
+      color: #1e40af;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .highlight-box {
+      background: #eef6ff;
+      border-left: 5px solid var(--accent);
+      padding: 18px 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .timeline-item h3 {
+      margin: 0;
+      color: var(--primary);
+    }
+
+    .timeline-item .meta {
+      color: var(--muted);
+      font-weight: 700;
+      margin: 6px 0 12px;
     }
 
     ul {
       padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .sample-label {
+      display: inline-block;
+      color: #1e40af;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 9px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #ffffff, #eff6ff);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
     }
 
     footer {
-      background: #1f2937;
+      background: var(--primary);
       color: white;
       text-align: center;
-      padding: 25px;
-      margin-top: 40px;
+      padding: 26px;
+      margin-top: 30px;
+    }
+
+    footer p {
+      margin: 0;
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 800px) {
+      header h1 {
+        font-size: 38px;
+      }
+
+      header h2 {
+        font-size: 20px;
+      }
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        text-align: left;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 0 10px 0 0;
+      }
     }
   </style>
 </head>
@@ -113,88 +305,146 @@
 <body>
 
   <header>
-    <h1>Jansirani V</h1>
-    <p>Senior Technical Writer | Documentation Engineer | API, Cloud, CLI & UX Documentation</p>
+    <div class="hero">
+      <span class="hero-tag">Technical Writing • Documentation Engineering • API • Cloud • UX</span>
+      <h1>Jansirani V</h1>
+      <h2>Senior Technical Writer | Documentation Engineer</h2>
+      <p>
+        I create clear, structured, and user-focused documentation for enterprise software,
+        networking, security, cloud, API, CLI, and product-integrated help systems.
+        My work focuses on simplifying complex technical workflows and improving product usability
+        through accurate, scalable, and searchable documentation.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="button primary" href="#samples">View Portfolio Samples</a>
+        <a class="button secondary" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio" target="_blank">View GitHub Repository</a>
+        <a class="button secondary" href="#contact">Contact Me</a>
+      </div>
+    </div>
   </header>
 
   <nav>
     <a href="#about">About</a>
-    <a href="#samples">Portfolio Samples</a>
+    <a href="#samples">Samples</a>
     <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
     <a href="#case-study">Case Study</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a Senior Technical Writer and Documentation Engineer with 15+ years of experience creating clear,
-      structured, and user-focused documentation for enterprise software, networking, security, cloud, API,
-      CLI, and product-integrated help systems.
-    </p>
-    <p>
-      My experience includes user guides, administrator guides, REST API documentation, CLI references,
-      cloud deployment guides, release notes, online help, troubleshooting guides, UX writing, and
-      AI-ready knowledge base strategy.
-    </p>
+    <div class="section-title">
+      <h2>About</h2>
+      <p>Senior documentation professional with deep experience in enterprise product documentation.</p>
+    </div>
+
+    <div class="two-column">
+      <div class="card">
+        <h3>Profile Summary</h3>
+        <p>
+          I am a Senior Technical Writer and Documentation Engineer with 15+ years of experience
+          creating documentation for enterprise networking, application delivery, cybersecurity,
+          cloud, fintech, aerospace, defense, semiconductor, and enterprise software environments.
+        </p>
+        <p>
+          I specialize in user guides, administrator guides, REST API documentation, CLI references,
+          cloud deployment guides, release notes, online help, troubleshooting content, UX writing,
+          and AI-ready knowledge base strategy.
+        </p>
+        <div class="highlight-box">
+          <strong>Positioning:</strong> I combine traditional technical writing with documentation engineering,
+          docs-as-code awareness, product usability thinking, and AI-ready content strategy.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>What I Bring</h3>
+        <ul>
+          <li>End-to-end documentation ownership</li>
+          <li>Complex networking and cloud documentation experience</li>
+          <li>API, CLI, deployment, and administrator documentation</li>
+          <li>Structured authoring and online help modernization</li>
+          <li>Cross-functional collaboration with Product, Engineering, QA, Support, UX, and Training teams</li>
+          <li>Git/GitLab-based documentation workflows</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="samples">
-    <h2>Portfolio Samples</h2>
+    <div class="section-title">
+      <h2>Portfolio Samples</h2>
+      <p>
+        Sanitized samples based on real enterprise documentation scenarios. Confidential product names,
+        customer data, screenshots, IP addresses, license keys, credentials, and proprietary values have been removed.
+      </p>
+    </div>
 
     <div class="card-grid">
 
       <div class="card">
+        <span class="sample-label">User Documentation</span>
         <h3>User Manual / User Guide</h3>
-        <p>Task-based end-user documentation with procedures, expected results, notes, and troubleshooting.</p>
-        <a class="button" href="https://github.com/Jansirani-vijayan/techncial_writing_portfolio/tree/main/user-manual-sample" target="_blank">View Sample</a>
+        <p>Task-based user documentation with procedures, expected results, notes, best practices, and troubleshooting.</p>
+        <a class="button card-button" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio/tree/main/user-manual-sample" target="_blank">View Sample</a>
       </div>
 
       <div class="card">
+        <span class="sample-label">Developer Documentation</span>
         <h3>API Documentation</h3>
         <p>REST API documentation for a network appliance, including authentication, request/response structure, status codes, examples, and troubleshooting.</p>
-        <a class="button" href="https://github.com/Jansirani-vijayan/techncial_writing_portfolio/tree/main/api-documentation-sample" target="_blank">View Sample</a>
+        <a class="button card-button" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio/tree/main/api-documentation-sample" target="_blank">View Sample</a>
       </div>
 
       <div class="card">
+        <span class="sample-label">CLI Documentation</span>
         <h3>CLI Administrator Guide</h3>
-        <p>CLI conventions, command syntax, access modes, examples, network configuration, HA, debug, and troubleshooting commands.</p>
-        <a class="button" href="https://github.com/Jansirani-vijayan/techncial_writing_portfolio/tree/main/cli-admin-guide-sample" target="_blank">View Sample</a>
+        <p>CLI conventions, command syntax, access modes, parameter tables, examples, HA, debug, and troubleshooting commands.</p>
+        <a class="button card-button" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio/tree/main/cli-admin-guide-sample" target="_blank">View Sample</a>
       </div>
 
       <div class="card">
+        <span class="sample-label">Cloud Documentation</span>
         <h3>Multi-cloud Deployment Guide</h3>
         <p>Azure-style, AWS-style, VMware ESXi-style, Nutanix-style, and virtual appliance deployment workflows.</p>
-        <a class="button" href="https://github.com/Jansirani-vijayan/techncial_writing_portfolio/tree/main/cloud-deployment-guide-sample" target="_blank">View Sample</a>
+        <a class="button card-button" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio/tree/main/cloud-deployment-guide-sample" target="_blank">View Sample</a>
       </div>
 
       <div class="card">
+        <span class="sample-label">UX Writing</span>
         <h3>UX Writing Case Study</h3>
-        <p>Before-and-after examples for error messages, empty states, warnings, confirmations, buttons, labels, and tooltips.</p>
-        <a class="button" href="https://github.com/Jansirani-vijayan/techncial_writing_portfolio/tree/main/ux-writing-case-study" target="_blank">View Sample</a>
+        <p>Before-and-after examples for errors, empty states, confirmations, warnings, buttons, labels, and tooltips.</p>
+        <a class="button card-button" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio/tree/main/ux-writing-case-study" target="_blank">View Sample</a>
       </div>
 
       <div class="card">
+        <span class="sample-label">Content Strategy</span>
         <h3>AI-ready Knowledge Base Strategy</h3>
-        <p>Taxonomy, metadata, topic templates, troubleshooting templates, search strategy, and RAG-friendly documentation structure.</p>
-        <a class="button" href="https://github.com/Jansirani-vijayan/techncial_writing_portfolio/tree/main/ai-ready-kb-strategy" target="_blank">View Sample</a>
+        <p>Taxonomy, metadata, topic templates, troubleshooting templates, search strategy, reuse, and RAG-friendly content structure.</p>
+        <a class="button card-button" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio/tree/main/ai-ready-kb-strategy" target="_blank">View Sample</a>
       </div>
 
     </div>
   </section>
 
-  <section id="skills">    <h2>Skills & Tools</h2>
+  <section id="skills">
+    <div class="section-title">
+      <h2>Skills & Tools</h2>
+      <p>Documentation capabilities across authoring, publishing, structured content, APIs, cloud, and collaboration.</p>
+    </div>
 
     <div class="card-grid">
       <div class="card">
-        <h3>Documentation</h3>
+        <h3>Documentation Types</h3>
         <ul>
-          <li>User Guides</li>
-          <li>Administrator Guides</li>
-          <li>API Documentation</li>
+          <li>User Guides and Administrator Guides</li>
           <li>CLI Reference Guides</li>
-          <li>Deployment Guides</li>
+          <li>REST API Documentation</li>
+          <li>Installation and Deployment Guides</li>
           <li>Release Notes</li>
+          <li>Online Help / HTML5 Help</li>
+          <li>Knowledge Base Articles</li>
         </ul>
       </div>
 
@@ -203,10 +453,23 @@
         <ul>
           <li>MadCap Flare</li>
           <li>Adobe FrameMaker</li>
-          <li>DITA/XML</li>
-          <li>Git/GitLab</li>
+          <li>MS Word and Adobe Acrobat</li>
+          <li>Oxygen XML</li>
           <li>Postman</li>
           <li>Swagger/OpenAPI Concepts</li>
+          <li>Snagit, Visio, Draw.io, Lucidchart</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>DITA/XML, HTML, CSS, Markdown</li>
+          <li>REST APIs, JSON, request/response examples</li>
+          <li>Git, GitLab, Bitbucket</li>
+          <li>Jira, Confluence, SharePoint</li>
+          <li>Docs-as-code workflows</li>
+          <li>AI-ready content structuring</li>
         </ul>
       </div>
 
@@ -214,25 +477,67 @@
         <h3>Domains</h3>
         <ul>
           <li>Enterprise Networking</li>
-          <li>Application Delivery</li>
+          <li>Application Delivery / ADC</li>
           <li>Cybersecurity</li>
-          <li>Cloud Deployment</li>
-          <li>Fintech</li>
-          <li>Semiconductor Documentation</li>
+          <li>Cloud and Virtual Appliances</li>
+          <li>Linux-based Platforms</li>
+          <li>Fintech, Aerospace, Defense, Semiconductor</li>
         </ul>
       </div>
     </div>
   </section>
 
+  <section id="experience">
+    <div class="section-title">
+      <h2>Experience Highlights</h2>
+      <p>Selected strengths that support Senior Technical Writer, Lead Writer, Information Developer, and Documentation Engineer roles.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Documentation Ownership</h3>
+        <div class="meta">Enterprise product documentation</div>
+        <p>
+          Owned and delivered user guides, administrator guides, CLI guides, API documentation,
+          release notes, deployment guides, installation guides, and online help for complex enterprise products.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Cross-functional Collaboration</h3>
+        <div class="meta">Product, Engineering, QA, Support, UX, and Training</div>
+        <p>
+          Worked closely with SMEs and product teams to gather technical inputs, validate workflows,
+          align documentation with releases, and improve content accuracy and usability.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Documentation Engineering</h3>
+        <div class="meta">Structured authoring, Git workflows, and online help</div>
+        <p>
+          Used structured authoring and Git/GitLab-based workflows to maintain documentation projects,
+          manage versions, and support scalable publishing outputs.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section id="case-study">
-    <h2>Documentation Modernization Case Study</h2>
+    <div class="section-title">
+      <h2>Documentation Modernization Case Study</h2>
+      <p>Transforming documentation from static deliverables into product-integrated user assistance.</p>
+    </div>
+
     <div class="card">
       <h3>From Static PDF to Product-integrated Online Help</h3>
       <p>
         I contributed to documentation modernization by moving documentation from static Word/PDF-based
-        deliverables to structured, topic-based online help. I worked on MadCap Flare-based workflows,
-        reusable content, standardized styles, HTML5 help output, PDF publishing, and Git/GitLab-based
-        version control.
+        deliverables to structured, topic-based online help.
+      </p>
+      <p>
+        I worked on MadCap Flare-based workflows, reusable content, standardized styles,
+        HTML5 help output, PDF publishing, and Git/GitLab-based version control.
       </p>
       <p>
         This improved content navigation, usability, consistency, release readiness, and product experience.
@@ -241,11 +546,17 @@
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>I am open to Senior Technical Writer, Lead Technical Writer, Information Developer, Documentation Engineer, API Writer, Cloud Documentation Writer, and UX Writer roles.</p>
-    <p><strong>Location:</strong> Bengaluru / Chennai / Remote</p>
-    <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/jansirani-vijayan-6b5756aa/</p>
-    <p><strong>Email:</strong> jansiranivijayan@gmail.com</p>
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>I am open to Senior Technical Writer, Lead Technical Writer, Information Developer, Documentation Engineer, API Writer, Cloud Documentation Writer, and UX Writer roles.</p>
+    </div>
+
+    <div class="contact-card">
+      <p><strong>Location Preference:</strong> Bengaluru / Chennai / Remote</p>
+      <p><strong>Portfolio Repository:</strong> <a href="https://github.com/Jansirani-vijayan/technical-writing-portfolio" target="_blank">GitHub Technical Writing Samples</a></p>
+      <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/jansirani-vijayan-6b5756aa/</p>
+      <p><strong>Email:</strong> jansiranivijayan@gmail.com</p>
+    </div>
   </section>
 
   <footer>
