@@ -406,6 +406,65 @@
   font-size: 14px;
   font-weight: 700;
 }
+
+.achievement-card {
+  position: relative;
+  overflow: hidden;
+  border-left: 5px solid #2563eb;
+}
+
+.achievement-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  background: #dbeafe;
+  border-bottom-left-radius: 100%;
+  opacity: 0.55;
+}
+
+.achievement-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.achievement-card h3 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.achievement-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.achievement-impact {
+  position: relative;
+  z-index: 1;
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.achievement-impact strong {
+  color: #0f172a;
+}
     
     .contact-card {
       background: linear-gradient(135deg, #ffffff, #eff6ff);
@@ -950,82 +1009,115 @@
   </div>
 </section>
 
- <section id="achievements">
+<section id="achievements">
   <div class="section-title">
     <h2>Selected Achievements</h2>
     <p>
       Highlights that show how my documentation work contributes to product quality,
-      customer enablement, team productivity, and release readiness.
+      customer enablement, documentation scalability, team productivity, and release readiness.
     </p>
   </div>
 
   <div class="card-grid">
-    <div class="card">
+
+    <div class="card achievement-card">
+      <span class="achievement-number">01</span>
       <h3>Documentation Modernization</h3>
       <p>
         Contributed to moving documentation from static Word/PDF-based deliverables to structured,
-        MadCap Flare-based HTML5 online help. This improved navigation, searchability, consistency,
-        reuse, and product-integrated user assistance.
+        MadCap Flare-based HTML5 online help with topic-based content, reusable patterns, and improved navigation.
       </p>
+      <div class="achievement-impact">
+        <strong>Impact:</strong> Improved searchability, consistency, content reuse, and product-integrated user assistance.
+      </div>
     </div>
 
-    <div class="card">
+    <div class="card achievement-card">
+      <span class="achievement-number">02</span>
       <h3>End-to-end Documentation Ownership</h3>
       <p>
         Owned documentation deliverables from planning to publishing, including requirement understanding,
         SME discussions, information architecture, authoring, review coordination, quality checks,
         release alignment, and maintenance.
       </p>
+      <div class="achievement-impact">
+        <strong>Impact:</strong> Improved release readiness and reduced last-minute documentation gaps.
+      </div>
     </div>
 
-    <div class="card">
+    <div class="card achievement-card">
+      <span class="achievement-number">03</span>
       <h3>Enterprise Technical Depth</h3>
       <p>
-        Documented complex enterprise workflows across REST APIs, CLI commands, cloud deployments,
+        Documented complex workflows across REST APIs, CLI commands, cloud deployments,
         virtual appliances, networking, licensing, high availability, debug, troubleshooting,
         and system administration.
       </p>
+      <div class="achievement-impact">
+        <strong>Impact:</strong> Helped technical users configure, deploy, integrate, and troubleshoot products confidently.
+      </div>
     </div>
 
-    <div class="card">
+    <div class="card achievement-card">
+      <span class="achievement-number">04</span>
       <h3>Process and Quality Improvement</h3>
       <p>
         Improved documentation consistency by using structured templates, style guidance, reusable content
         patterns, review practices, and quality checks across multiple deliverables and release cycles.
       </p>
+      <div class="achievement-impact">
+        <strong>Impact:</strong> Increased consistency across guides, release notes, online help, and knowledge content.
+      </div>
     </div>
 
-    <div class="card">
+    <div class="card achievement-card">
+      <span class="achievement-number">05</span>
       <h3>Team Enablement and Mentoring</h3>
       <p>
         Mentored team members and helped them handle documentation tasks independently with better
         ownership, review discipline, content quality, and confidence.
       </p>
+      <div class="achievement-impact">
+        <strong>Impact:</strong> Improved team independence, quality ownership, and delivery confidence.
+      </div>
     </div>
 
-    <div class="card">
+    <div class="card achievement-card">
+      <span class="achievement-number">06</span>
       <h3>Cross-functional Impact</h3>
       <p>
         Worked with Product, Engineering, QA, Support, UX, Training, and management teams to ensure
         documentation accuracy, usability, customer readiness, and release completeness.
       </p>
+      <div class="achievement-impact">
+        <strong>Impact:</strong> Strengthened collaboration between documentation, product, engineering, and support teams.
+      </div>
     </div>
 
-    <div class="card">
+    <div class="card achievement-card">
+      <span class="achievement-number">07</span>
       <h3>Recognition and Individual Contribution</h3>
       <p>
         Received appreciation and awards for documentation quality, process automation, individual
         contribution, team collaboration, and successful project delivery.
       </p>
+      <div class="achievement-impact">
+        <strong>Impact:</strong> Recognized for quality-driven delivery, ownership, and continuous improvement.
+      </div>
     </div>
 
-    <div class="card">
+    <div class="card achievement-card">
+      <span class="achievement-number">08</span>
       <h3>Customer and Support Enablement</h3>
       <p>
         Created documentation that helps users configure, deploy, integrate, troubleshoot, and validate
         enterprise products with less dependency on support or engineering teams.
       </p>
+      <div class="achievement-impact">
+        <strong>Impact:</strong> Supported better customer self-service and faster issue resolution.
+      </div>
     </div>
+
   </div>
 </section>
   
