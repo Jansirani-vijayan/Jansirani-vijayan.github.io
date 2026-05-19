@@ -382,6 +382,31 @@
   margin-top: 16px;
 }
 
+.skill-card {
+  border-left: 5px solid var(--accent);
+}
+
+.skill-card h3 {
+  margin-bottom: 14px;
+}
+
+.skill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.skill-chip {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+}
+    
     .contact-card {
       background: linear-gradient(135deg, #ffffff, #eff6ff);
       border: 1px solid var(--border);
@@ -800,63 +825,130 @@
 </section>
       
   <section id="skills">
-    <div class="section-title">
-      <h2>Skills & Tools</h2>
-      <p>Documentation capabilities across authoring, publishing, structured content, APIs, cloud, and collaboration.</p>
-    </div>
+  <div class="section-title">
+    <h2>Skills & Tools</h2>
+    <p>
+      A mix of technical writing, documentation engineering, structured authoring,
+      product documentation, API/CLI documentation, cloud deployment content, and collaboration tools.
+    </p>
+  </div>
 
-    <div class="card-grid">
-      <div class="card">
-        <h3>Documentation Types</h3>
-        <ul>
-          <li>User Guides and Administrator Guides</li>
-          <li>CLI Reference Guides</li>
-          <li>REST API Documentation</li>
-          <li>Installation and Deployment Guides</li>
-          <li>Release Notes</li>
-          <li>Online Help / HTML5 Help</li>
-          <li>Knowledge Base Articles</li>
-        </ul>
-      </div>
+  <div class="card-grid">
 
-      <div class="card">
-        <h3>Tools</h3>
-        <ul>
-          <li>MadCap Flare</li>
-          <li>Adobe FrameMaker</li>
-          <li>MS Word and Adobe Acrobat</li>
-          <li>Oxygen XML</li>
-          <li>Postman</li>
-          <li>Swagger/OpenAPI Concepts</li>
-          <li>Snagit, Visio, Draw.io, Lucidchart</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Technical Skills</h3>
-        <ul>
-          <li>DITA/XML, HTML, CSS, Markdown</li>
-          <li>REST APIs, JSON, request/response examples</li>
-          <li>Git, GitLab, Bitbucket</li>
-          <li>Jira, Confluence, SharePoint</li>
-          <li>Docs-as-code workflows</li>
-          <li>AI-ready content structuring</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Domains</h3>
-        <ul>
-          <li>Enterprise Networking</li>
-          <li>Application Delivery / ADC</li>
-          <li>Cybersecurity</li>
-          <li>Cloud and Virtual Appliances</li>
-          <li>Linux-based Platforms</li>
-          <li>Fintech, Aerospace, Defense, Semiconductor</li>
-        </ul>
+    <div class="card skill-card">
+      <h3>Documentation Types</h3>
+      <div class="skill-group">
+        <span class="skill-chip">User Guides</span>
+        <span class="skill-chip">Administrator Guides</span>
+        <span class="skill-chip">CLI References</span>
+        <span class="skill-chip">REST API Docs</span>
+        <span class="skill-chip">Installation Guides</span>
+        <span class="skill-chip">Deployment Guides</span>
+        <span class="skill-chip">Release Notes</span>
+        <span class="skill-chip">Online Help</span>
+        <span class="skill-chip">Troubleshooting Guides</span>
+        <span class="skill-chip">Knowledge Base Articles</span>
       </div>
     </div>
-  </section>
+
+    <div class="card skill-card">
+      <h3>Authoring & Publishing</h3>
+      <div class="skill-group">
+        <span class="skill-chip">MadCap Flare</span>
+        <span class="skill-chip">Adobe FrameMaker</span>
+        <span class="skill-chip">MS Word</span>
+        <span class="skill-chip">Adobe Acrobat</span>
+        <span class="skill-chip">Adobe RoboHelp</span>
+        <span class="skill-chip">HTML5 Help</span>
+        <span class="skill-chip">PDF Publishing</span>
+      </div>
+    </div>
+
+    <div class="card skill-card">
+      <h3>Structured Content</h3>
+      <div class="skill-group">
+        <span class="skill-chip">DITA</span>
+        <span class="skill-chip">XML</span>
+        <span class="skill-chip">Markdown</span>
+        <span class="skill-chip">HTML</span>
+        <span class="skill-chip">CSS</span>
+        <span class="skill-chip">Content Reuse</span>
+        <span class="skill-chip">Style Guides</span>
+        <span class="skill-chip">Templates</span>
+      </div>
+    </div>
+
+    <div class="card skill-card">
+      <h3>API & Developer Documentation</h3>
+      <div class="skill-group">
+        <span class="skill-chip">REST APIs</span>
+        <span class="skill-chip">JSON</span>
+        <span class="skill-chip">XML Payloads</span>
+        <span class="skill-chip">Postman</span>
+        <span class="skill-chip">Swagger/OpenAPI Concepts</span>
+        <span class="skill-chip">Authentication</span>
+        <span class="skill-chip">Status Codes</span>
+        <span class="skill-chip">Error Responses</span>
+      </div>
+    </div>
+
+    <div class="card skill-card">
+      <h3>Version Control & Collaboration</h3>
+      <div class="skill-group">
+        <span class="skill-chip">Git</span>
+        <span class="skill-chip">GitLab</span>
+        <span class="skill-chip">Bitbucket</span>
+        <span class="skill-chip">Jira</span>
+        <span class="skill-chip">Confluence</span>
+        <span class="skill-chip">SharePoint</span>
+        <span class="skill-chip">Agile/Scrum</span>
+        <span class="skill-chip">SME Reviews</span>
+      </div>
+    </div>
+
+    <div class="card skill-card">
+      <h3>Visual & Design Tools</h3>
+      <div class="skill-group">
+        <span class="skill-chip">Snagit</span>
+        <span class="skill-chip">Adobe Illustrator</span>
+        <span class="skill-chip">MS Visio</span>
+        <span class="skill-chip">Draw.io</span>
+        <span class="skill-chip">Lucidchart</span>
+        <span class="skill-chip">Figma Basics</span>
+      </div>
+    </div>
+
+    <div class="card skill-card">
+      <h3>Technical Domains</h3>
+      <div class="skill-group">
+        <span class="skill-chip">Enterprise Networking</span>
+        <span class="skill-chip">ADC</span>
+        <span class="skill-chip">Cybersecurity</span>
+        <span class="skill-chip">Cloud Deployments</span>
+        <span class="skill-chip">Virtual Appliances</span>
+        <span class="skill-chip">Linux</span>
+        <span class="skill-chip">Fintech</span>
+        <span class="skill-chip">Aerospace</span>
+        <span class="skill-chip">Defense</span>
+        <span class="skill-chip">Semiconductor Documentation</span>
+      </div>
+    </div>
+
+    <div class="card skill-card">
+      <h3>Future-ready Documentation</h3>
+      <div class="skill-group">
+        <span class="skill-chip">AI-ready KB</span>
+        <span class="skill-chip">Metadata</span>
+        <span class="skill-chip">Taxonomy</span>
+        <span class="skill-chip">Semantic Search</span>
+        <span class="skill-chip">RAG-friendly Content</span>
+        <span class="skill-chip">UX Writing</span>
+        <span class="skill-chip">Microcopy</span>
+      </div>
+    </div>
+
+  </div>
+</section>
 
  <section id="achievements">
   <div class="section-title">
