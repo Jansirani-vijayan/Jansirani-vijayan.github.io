@@ -41,7 +41,7 @@
     header {
       background: linear-gradient(135deg, #0f172a, #1e3a8a);
       color: white;
-      padding: 90px 24px 70px;
+      padding: 90px 42px 70px;
     }
 
     .hero {
@@ -228,12 +228,13 @@
 .main-content {
   margin-left: 300px;
   width: calc(100% - 300px);
+  background: #f8fafc;
 }
 
     section {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: auto;
-      padding: 58px 24px;
+      padding: 64px 42px;
     }
 
     .section-title {
@@ -337,17 +338,49 @@
       margin-bottom: 0;
     }
 
-    .sample-label {
-      display: inline-block;
-      color: #1e40af;
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 4px 9px;
-      border-radius: 999px;
-      margin-bottom: 12px;
-    }
+   .sample-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 310px;
+  border-top: 5px solid var(--accent);
+}
+
+.sample-card h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.sample-label {
+  display: inline-block;
+  width: fit-content;
+  color: #1e40af;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.sample-proof {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.sample-proof strong {
+  color: var(--primary);
+}
+
+.sample-actions {
+  margin-top: 16px;
+}
 
     .contact-card {
       background: linear-gradient(135deg, #ffffff, #eff6ff);
@@ -660,62 +693,112 @@
   </div>
 </section>
   
-  <section id="samples">
-    <div class="section-title">
-      <h2>Portfolio Samples</h2>
+<section id="samples">
+  <div class="section-title">
+    <h2>Portfolio Samples</h2>
+    <p>
+      Sanitized documentation samples based on real enterprise documentation scenarios.
+      These samples demonstrate my ability to write for users, administrators, developers,
+      implementation teams, support teams, and AI-ready knowledge systems.
+    </p>
+  </div>
+
+  <div class="card-grid">
+
+    <div class="card sample-card">
+      <span class="sample-label">User Documentation</span>
+      <h3>User Manual / User Guide</h3>
       <p>
-        Sanitized samples based on real enterprise documentation scenarios. Confidential product names,
-        customer data, screenshots, IP addresses, license keys, credentials, and proprietary values have been removed.
+        Task-based product documentation that explains feature usage, prerequisites,
+        procedures, expected results, best practices, and troubleshooting.
       </p>
-    </div>
-
-    <div class="card-grid">
-
-      <div class="card">
-        <span class="sample-label">User Documentation</span>
-        <h3>User Manual / User Guide</h3>
-        <p>Task-based user documentation with procedures, expected results, notes, best practices, and troubleshooting.</p>
+      <div class="sample-proof">
+        <strong>What it proves:</strong> User-focused writing, procedure design, clarity, and support enablement.
+      </div>
+      <div class="sample-actions">
         <a class="button card-button" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio/tree/main/user-manual-sample" target="_blank">View Sample</a>
       </div>
+    </div>
 
-      <div class="card">
-        <span class="sample-label">Developer Documentation</span>
-        <h3>API Documentation</h3>
-        <p>REST API documentation for a network appliance, including authentication, request/response structure, status codes, examples, and troubleshooting.</p>
+    <div class="card sample-card">
+      <span class="sample-label">Developer Documentation</span>
+      <h3>REST API Documentation</h3>
+      <p>
+        API documentation for a network appliance, including authentication,
+        headers, HTTP methods, request/response structure, status codes, examples,
+        and troubleshooting.
+      </p>
+      <div class="sample-proof">
+        <strong>What it proves:</strong> API writing, JSON/XML examples, developer onboarding, and integration support.
+      </div>
+      <div class="sample-actions">
         <a class="button card-button" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio/tree/main/api-documentation-sample" target="_blank">View Sample</a>
       </div>
+    </div>
 
-      <div class="card">
-        <span class="sample-label">CLI Documentation</span>
-        <h3>CLI Administrator Guide</h3>
-        <p>CLI conventions, command syntax, access modes, parameter tables, examples, HA, debug, and troubleshooting commands.</p>
+    <div class="card sample-card">
+      <span class="sample-label">CLI Documentation</span>
+      <h3>CLI Administrator Guide</h3>
+      <p>
+        CLI guide covering command conventions, access modes, command syntax,
+        parameter tables, examples, expected outputs, HA, debug, and troubleshooting.
+      </p>
+      <div class="sample-proof">
+        <strong>What it proves:</strong> Command reference writing, administrator workflows, and technical accuracy.
+      </div>
+      <div class="sample-actions">
         <a class="button card-button" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio/tree/main/cli-admin-guide-sample" target="_blank">View Sample</a>
       </div>
+    </div>
 
-      <div class="card">
-        <span class="sample-label">Cloud Documentation</span>
-        <h3>Multi-cloud Deployment Guide</h3>
-        <p>Azure-style, AWS-style, VMware ESXi-style, Nutanix-style, and virtual appliance deployment workflows.</p>
+    <div class="card sample-card">
+      <span class="sample-label">Cloud Documentation</span>
+      <h3>Multi-cloud Deployment Guide</h3>
+      <p>
+        Deployment documentation covering Azure-style, AWS-style, VMware ESXi-style,
+        Nutanix-style, and virtual appliance deployment workflows.
+      </p>
+      <div class="sample-proof">
+        <strong>What it proves:</strong> Cloud deployment writing, environment planning, verification, and troubleshooting.
+      </div>
+      <div class="sample-actions">
         <a class="button card-button" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio/tree/main/cloud-deployment-guide-sample" target="_blank">View Sample</a>
       </div>
+    </div>
 
-      <div class="card">
-        <span class="sample-label">UX Writing</span>
-        <h3>UX Writing Case Study</h3>
-        <p>Before-and-after examples for errors, empty states, confirmations, warnings, buttons, labels, and tooltips.</p>
+    <div class="card sample-card">
+      <span class="sample-label">UX Writing</span>
+      <h3>UX Writing Case Study</h3>
+      <p>
+        Before-and-after examples for error messages, empty states, confirmation
+        messages, warning dialogs, buttons, labels, tooltips, and product microcopy.
+      </p>
+      <div class="sample-proof">
+        <strong>What it proves:</strong> Product usability thinking, microcopy improvement, and user empathy.
+      </div>
+      <div class="sample-actions">
         <a class="button card-button" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio/tree/main/ux-writing-case-study" target="_blank">View Sample</a>
       </div>
+    </div>
 
-      <div class="card">
-        <span class="sample-label">Content Strategy</span>
-        <h3>AI-ready Knowledge Base Strategy</h3>
-        <p>Taxonomy, metadata, topic templates, troubleshooting templates, search strategy, reuse, and RAG-friendly content structure.</p>
+    <div class="card sample-card">
+      <span class="sample-label">Content Strategy</span>
+      <h3>AI-ready Knowledge Base Strategy</h3>
+      <p>
+        Knowledge base strategy covering taxonomy, metadata, topic templates,
+        troubleshooting templates, search strategy, content reuse, and RAG-friendly structure.
+      </p>
+      <div class="sample-proof">
+        <strong>What it proves:</strong> AI-ready content planning, semantic search readiness, and scalable KB design.
+      </div>
+      <div class="sample-actions">
         <a class="button card-button" href="https://github.com/Jansirani-vijayan/technical-writing-portfolio/tree/main/ai-ready-kb-strategy" target="_blank">View Sample</a>
       </div>
-
     </div>
-  </section>
 
+  </div>
+</section>
+      
   <section id="skills">
     <div class="section-title">
       <h2>Skills & Tools</h2>
