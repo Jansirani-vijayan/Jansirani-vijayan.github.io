@@ -118,64 +118,116 @@
   min-height: 100vh;
 }
 
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
 .sidebar {
-  width: 280px;
-  background: #0f172a;
+  width: 300px;
+  background: linear-gradient(180deg, #0f172a, #111827);
   color: white;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  padding: 34px 24px;
+  padding: 30px 24px;
   overflow-y: auto;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-profile {
+  text-align: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 22px;
 }
 
 .sidebar-photo {
-  width: 130px;
-  height: 130px;
+  width: 135px;
+  height: 135px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.25);
-  margin-bottom: 18px;
+  object-position: center;
+  border: 4px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  margin-bottom: 16px;
 }
 
 .sidebar h2 {
   margin: 0;
-  font-size: 24px;
+  font-size: 25px;
   color: white;
+  letter-spacing: -0.3px;
 }
 
-.sidebar p {
+.sidebar-role {
   color: #cbd5e1;
   font-size: 14px;
-  margin: 8px 0 24px;
+  margin: 8px 0 18px;
   line-height: 1.5;
 }
 
-.sidebar nav {
+.sidebar-tags {
   display: flex;
-  
-  flex-direction: column;
-  gap: 8px;
+  gap: 7px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.sidebar nav a {
+.sidebar-tags span {
+  font-size: 12px;
+  color: #bfdbfe;
+  background: rgba(37, 99, 235, 0.18);
+  border: 1px solid rgba(191, 219, 254, 0.22);
+  padding: 5px 8px;
+  border-radius: 999px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sidebar-nav a {
   color: #e5e7eb;
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
   padding: 10px 12px;
   border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-.sidebar nav a:hover {
+.sidebar-nav a:hover {
   background: rgba(255, 255, 255, 0.12);
+  color: white;
+  transform: translateX(3px);
+}
+
+.sidebar-contact {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-contact a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sidebar-contact a:hover {
   color: white;
 }
 
 .main-content {
-  margin-left: 280px;
-  width: calc(100% - 280px);
+  margin-left: 300px;
+  width: calc(100% - 300px);
 }
 
     section {
@@ -365,23 +417,38 @@
   <div class="layout">
 
     <aside class="sidebar">
-      <img src="profile-photo.jpg" alt="Profile photo of Jansirani V" class="sidebar-photo" />
+  <div class="sidebar-profile">
+    <img src="profile-photo.jpg" alt="Profile photo of Jansirani V" class="sidebar-photo" />
 
-      <h2>Jansirani V</h2>
-      <p>Senior Technical Writer<br>Documentation Engineer</p>
+    <h2>Jansirani V</h2>
+    <p class="sidebar-role">Senior Technical Writer<br>Documentation Engineer</p>
 
-      <nav>
-        <a href="#market-fit">Market Fit</a>
-        <a href="#about">About</a>
-        <a href="#core-expertise">Expertise</a>
-        <a href="#samples">Samples</a>
-        <a href="#skills">Skills</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#experience">Experience</a>
-        <a href="#case-study">Case Study</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </aside>
+    <div class="sidebar-tags">
+      <span>API Docs</span>
+      <span>CLI Guides</span>
+      <span>Cloud Docs</span>
+      <span>UX Writing</span>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a href="#market-fit">Market Fit</a>
+    <a href="#about">About</a>
+    <a href="#core-expertise">Expertise</a>
+    <a href="#samples">Samples</a>
+    <a href="#skills">Skills</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#experience">Experience</a>
+    <a href="#case-study">Case Study</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="sidebar-contact">
+    <a href="https://github.com/Jansirani-vijayan/technical-writing-portfolio" target="_blank">GitHub Portfolio</a>
+    <a href="https://www.linkedin.com/in/jansirani-vijayan-6b5756aa/" target="_blank">LinkedIn</a>
+    <a href="mailto:jansiranivijayan@gmail.com">Email</a>
+  </div>
+</aside>
 
     <main class="main-content">
 
