@@ -201,55 +201,13 @@
 
     /* About */
 
-    .about-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin: 22px 0 12px;
-    }
-
-    .secondary-button {
-      background: #fff7ed;
-      color: #7a3d25;
-      box-shadow: 0 4px 12px rgba(31, 41, 51, 0.05);
-  }
-
-    .secondary-button:hover {
-      background: #f3e5dc;
-  }
-
     .about-wrap {
        display: grid;
        grid-template-columns: minmax(560px, 1fr) 360px;
        gap: 42px;
        align-items: start;
-       position: relative;
     }
 
-    .about-actions {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .about-actions .button {
-      margin-top: 0;
-      padding: 9px 13px;
-      font-size: 14px;
-    }
-
-    .secondary-button {
-      background: #fff7ed;
-      color: #7a3d25;
-      box-shadow: 0 4px 12px rgba(31, 41, 51, 0.05);
-    }
-
-    .secondary-button:hover {
-      background: #f3e5dc;
-    }
 
     .about-name {
       font-size: 58px;
@@ -501,10 +459,10 @@
       
 .about-top-actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .about-top-actions .button,
@@ -513,14 +471,16 @@
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(31, 41, 51, 0.08);
   margin-top: 0;
-  padding: 9px 13px;
+  padding: 9px 14px;
   font-size: 14px;
   border-radius: 8px;
+  font-weight: 800;
 }
 
 .about-top-actions .button:hover,
 .about-top-actions .secondary-button:hover {
   background: #5f2f1d;
+  color: #ffffff;
   text-decoration: none;
 }
 
