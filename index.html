@@ -70,51 +70,51 @@
     }
 
     .profile img {
-      width: 145px;
-      height: 145px;
+      width: 175px;
+      height: 175px;
       border-radius: 50%;
       object-fit: cover;
       border: 5px solid rgba(196, 95, 61, 0.85);
       background: #ffffff;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
     .profile h1 {
       font-size: 30px;
-      line-height: 1.15;
+      line-height: 1.1;
       letter-spacing: 1px;
       margin: 0;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .profile p {
-      margin: 16px 0 0;
+      margin: 14px 0 0;
       color: #f2b091;
       font-weight: 700;
       font-size: 17px;
-      line-height: 1.4;
+      line-height: 1.35;
     }
 
     .sidebar-line {
       height: 1px;
-      background: var(--accent);
-      margin: 26px 0;
-      opacity: 0.9;
+      background: rgba(196, 95, 61, 0.65);
+      margin: 22px 0;
     }
 
     .nav a {
       display: block;
-      color: #d7dce0;
-      padding: 11px 14px;
-      margin-bottom: 6px;
+      color: #b8c0c7;
+      padding: 8px 12px;
+      margin-bottom: 4px;
       border-radius: 8px;
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 700;
     }
 
     .nav a:hover {
-      background: rgba(255, 255, 255, 0.08);
-      color: white;
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
       text-decoration: none;
     }
 
@@ -194,6 +194,23 @@
     }
 
     /* About */
+
+    .about-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 22px 0 12px;
+    }
+
+    .secondary-button {
+      background: #fff7ed;
+      color: #7a3d25;
+      box-shadow: 0 4px 12px rgba(31, 41, 51, 0.05);
+  }
+
+    .secondary-button:hover {
+      background: #f3e5dc;
+  }
 
     .about-wrap {
       display: grid;
@@ -494,8 +511,8 @@
       }
 
       .profile img {
-        width: 120px;
-        height: 120px;
+        width: 135px;
+        height: 135px;
       }
 
       .contact-actions {
@@ -521,7 +538,7 @@
     <aside class="sidebar">
       <div class="profile">
         <img src="profile-photo.jpg" alt="Profile photo of Jansirani V" />
-        <h1>Jansirani<br>V</h1>
+        <h1>Jansirani V</h1>
         <p>Product Documentation Lead<br>Documentation Engineer</p>
       </div>
 
@@ -538,13 +555,6 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <div class="sidebar-line"></div>
-
-      <div class="sidebar-links">
-        <a href="https://github.com/Jansirani-vijayan/technical_writing_portfolio" target="_blank">GitHub Portfolio</a>
-        <a href="https://www.linkedin.com/in/jansirani-vijayan-6b5756aa/" target="_blank">LinkedIn</a>
-        <a href="mailto:jansiranivijayan@gmail.com">Email</a>
-      </div>
     </aside>
 
     <!-- Main Content -->
@@ -573,6 +583,12 @@
                 <strong>usable documentation that supports product adoption, customer self-service,
                 and release readiness.</strong>
               </p>
+
+              <div class="about-actions">
+                <a class="button" href="https://github.com/Jansirani-vijayan/technical_writing_portfolio" target="_blank">GitHub Portfolio</a>
+                <a class="button secondary-button" href="https://www.linkedin.com/in/jansirani-vijayan-6b5756aa/" target="_blank">LinkedIn</a>
+                <a class="button secondary-button" href="mailto:jansiranivijayan@gmail.com">Email</a>
+              </div>
 
               <div class="construction-note">
                 Portfolio under construction — detailed case studies and selected work samples are being refined.
