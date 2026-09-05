@@ -4,23 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Jansirani Vijayan | Senior Technical Writer</title>
+  <title>Jansirani V | Product Documentation Lead</title>
 
   <style>
     :root {
       --sidebar-bg: #252d33;
       --sidebar-dark: #1e252b;
       --accent: #c45f3d;
-      --accent-light: #f3e5dc;
+      --accent-dark: #7a3d25;
+      --accent-soft: #fff7ed;
       --text: #1f2933;
       --muted: #5b6773;
       --border: #e5e7eb;
-      --card-bg: #ffffff;
       --page-bg: #fafafa;
+      --card-bg: #ffffff;
     }
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -44,48 +49,6 @@
       display: flex;
       min-height: 100vh;
     }
-
-    /* Skill */
-
-    .skill-section {
-  margin-top: 34px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--border);
-}
-
-.skill-section:last-child {
-  border-bottom: none;
-}
-
-.skill-section h3 {
-  font-size: 22px;
-  color: var(--accent);
-  margin-bottom: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-}
-
-.skill-section p {
-  font-size: 17px;
-  color: var(--text);
-  line-height: 1.75;
-}
-
-.skill-subsection {
-  margin-top: 22px;
-}
-
-.skill-subsection h4 {
-  font-size: 18px;
-  color: var(--text);
-  margin: 0 0 8px;
-}
-
-.skill-subsection p {
-  margin: 0;
-  color: var(--muted);
-}
-    
 
     /* Sidebar */
 
@@ -111,7 +74,7 @@
       height: 145px;
       border-radius: 50%;
       object-fit: cover;
-      border: 5px solid rgba(196, 95, 61, 0.8);
+      border: 5px solid rgba(196, 95, 61, 0.85);
       background: #ffffff;
       margin-bottom: 22px;
     }
@@ -166,12 +129,11 @@
       color: white;
     }
 
-    /* Main */
+    /* Main Layout */
 
     .main {
       margin-left: 280px;
       width: calc(100% - 280px);
-      padding: 0;
     }
 
     .container {
@@ -181,7 +143,7 @@
     }
 
     section {
-      padding: 42px 0;
+      padding: 44px 0;
       border-bottom: 1px solid var(--border);
     }
 
@@ -191,7 +153,7 @@
 
     h2 {
       font-size: 34px;
-      margin: 0 0 18px;
+      margin: 0 0 22px;
       color: var(--text);
     }
 
@@ -215,6 +177,53 @@
       margin: 0 0 14px;
     }
 
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 11px 16px;
+      border-radius: 8px;
+      font-weight: 800;
+      margin-top: 10px;
+    }
+
+    .button:hover {
+      text-decoration: none;
+      opacity: 0.9;
+    }
+
+    /* About */
+
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1.55fr 0.95fr;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .about-name {
+      font-size: 58px;
+      line-height: 1;
+      letter-spacing: 1px;
+      margin: 0;
+      color: var(--text);
+      text-transform: uppercase;
+    }
+
+    .title-line {
+      width: 72px;
+      height: 4px;
+      background: var(--accent);
+      margin: 16px 0 18px;
+    }
+
+    .role-title {
+      font-size: 22px;
+      color: var(--accent);
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
     .intro {
       font-size: 20px;
       font-weight: 700;
@@ -224,7 +233,7 @@
 
     .construction-note {
       display: inline-block;
-      background: #fff7ed;
+      background: var(--accent-soft);
       color: #92400e;
       border-left: 5px solid var(--accent);
       padding: 12px 16px;
@@ -233,21 +242,76 @@
       border-radius: 8px;
     }
 
+    .modern-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 18px 0 32px;
+    }
+
+    .modern-list li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 12px;
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .modern-list li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 1;
+    }
+
     .tag-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
       margin-top: 18px;
     }
 
     .tag {
-      background: #f5efe9;
-      color: #7a3d25;
-      border: 1px solid #ead2c3;
-      padding: 7px 12px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      border: none;
+      padding: 9px 14px;
       border-radius: 999px;
       font-size: 14px;
       font-weight: 700;
+      box-shadow: 0 4px 12px rgba(31, 41, 51, 0.05);
+    }
+
+    .quick-facts {
+      border-left: none;
+      padding-left: 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .fact {
+      background: var(--accent-soft);
+      border: none;
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: 0 6px 18px rgba(31, 41, 51, 0.06);
+    }
+
+    .fact strong {
+      display: block;
+      color: var(--accent-dark);
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .fact span {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
     }
 
     /* Cards */
@@ -261,10 +325,10 @@
 
     .card {
       background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 22px;
-      box-shadow: 0 6px 18px rgba(31, 41, 51, 0.05);
+      border: none;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 6px 20px rgba(31, 41, 51, 0.07);
     }
 
     .card h3 {
@@ -291,65 +355,58 @@
       font-weight: 700;
     }
 
-    .button {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      padding: 11px 16px;
-      border-radius: 8px;
-      font-weight: 800;
-      margin-top: 10px;
+    /* Skills */
+
+    .skill-section {
+      margin-top: 34px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .button:hover {
-      text-decoration: none;
-      opacity: 0.9;
+    .skill-section:last-child {
+      border-bottom: none;
     }
 
-    /* About metrics */
-
-    .about-wrap {
-      display: grid;
-      grid-template-columns: 1.6fr 0.9fr;
-      gap: 38px;
-      align-items: start;
+    .skill-section h3 {
+      font-size: 22px;
+      color: var(--accent);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
     }
 
-    .quick-facts {
-      border-left: 1px solid var(--border);
-      padding-left: 30px;
-    }
-
-    .fact {
-      margin-bottom: 18px;
-    }
-
-    .fact strong {
-      display: block;
+    .skill-section p {
+      font-size: 17px;
       color: var(--text);
+      line-height: 1.75;
+    }
+
+    .skill-subsection {
+      margin-top: 22px;
+    }
+
+    .skill-subsection h4 {
       font-size: 18px;
+      color: var(--text);
+      margin: 0 0 8px;
     }
 
-    .fact span {
+    .skill-subsection p {
+      margin: 0;
       color: var(--muted);
-      font-size: 15px;
     }
 
-    /* Experience */
+    /* Experience and Education */
 
     .experience-item,
     .education-item {
       background: white;
-      border: 1px solid var(--border);
+      border: none;
       border-left: 5px solid var(--accent);
-      border-radius: 12px;
+      border-radius: 16px;
       padding: 24px;
       margin-top: 22px;
-    }
-
-    .experience-item h3,
-    .education-item h3 {
-      color: var(--text);
+      box-shadow: 0 6px 20px rgba(31, 41, 51, 0.07);
     }
 
     .company-line {
@@ -367,10 +424,11 @@
 
     .contact-card {
       background: linear-gradient(135deg, #ffffff, #fff7ed);
-      border: 1px solid #ead2c3;
+      border: none;
       border-radius: 18px;
       padding: 28px;
       margin-top: 20px;
+      box-shadow: 0 6px 20px rgba(31, 41, 51, 0.07);
     }
 
     .contact-actions {
@@ -386,6 +444,8 @@
       padding: 28px;
       font-size: 14px;
     }
+
+    /* Mobile */
 
     @media (max-width: 850px) {
       .layout {
@@ -412,9 +472,20 @@
         grid-template-columns: 1fr;
       }
 
-      .quick-facts {
-        border-left: none;
-        padding-left: 0;
+      .about-name {
+        font-size: 42px;
+      }
+
+      .role-title {
+        font-size: 19px;
+      }
+
+      .modern-list li {
+        font-size: 16px;
+      }
+
+      .tag {
+        font-size: 13px;
       }
 
       h2 {
@@ -424,6 +495,14 @@
       .profile img {
         width: 120px;
         height: 120px;
+      }
+
+      .contact-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        text-align: center;
       }
     }
   </style>
@@ -435,9 +514,9 @@
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="profile">
-        <img src="profile-photo.jpg" alt="Profile photo of Jansirani Vijayan" />
-        <h1>Jansirani<br>Vijayan</h1>
-        <p>Senior Technical Writer<br>Documentation Engineer</p>
+        <img src="profile-photo.jpg" alt="Profile photo of Jansirani V" />
+        <h1>Jansirani<br>V</h1>
+        <p>Product Documentation Lead<br>Documentation Engineer</p>
       </div>
 
       <div class="sidebar-line"></div>
@@ -470,61 +549,89 @@
         <!-- About -->
         <section id="about">
           <div class="about-wrap">
-            <div>
-              <h2>About</h2>
+
+            <div class="about-main">
+              <h1 class="about-name">JANSIRANI V</h1>
+              <div class="title-line"></div>
+
+              <p class="role-title">
+                Product Documentation Lead | Documentation Engineer
+              </p>
 
               <p class="intro">
-                Senior Technical Writer and Documentation Engineer with 15+ years of experience
-                across hardware, software, cloud, networking, database, semiconductor, fintech,
-                telecom, and enterprise product documentation.
+                Senior documentation professional with <strong>15+ years of experience</strong>
+                creating clear, structured, and release-ready documentation for complex technical products.
+              </p>
+
+              <p>
+                I help product and engineering teams convert complex information into
+                <strong>usable documentation that supports product adoption, customer self-service,
+                and release readiness.</strong>
               </p>
 
               <div class="construction-note">
-                Portfolio under construction — the website framework is ready, and detailed
-                case studies, final content, and selected work samples are being refined.
+                Portfolio under construction — detailed case studies and selected work samples are being refined.
               </div>
 
-              <p>
-                I help engineering and product teams convert technical complexity into clear,
-                structured, searchable, and customer-ready documentation.
-              </p>
+              <h3>What I Bring</h3>
 
-              <h3>Domains I have worked across</h3>
+              <ul class="modern-list">
+                <li>Quickly understand complex technical products, workflows, and user needs.</li>
+                <li>Own the documentation lifecycle from planning, content development, review, validation, publishing, and post-release maintenance.</li>
+                <li>Collaborate with stakeholders, product managers, engineering teams, QA, support, SMEs, and operations leaders to collect inputs and deliver accurate documentation.</li>
+                <li>Create customer-focused documentation with technical accuracy, clear structure, and release readiness.</li>
+                <li>Define documentation strategy, information architecture, content models, taxonomy, metadata, reuse, and governance.</li>
+                <li>Modernize documentation by improving structure, navigation, searchability, content reuse, and maintainability.</li>
+                <li>Validate UI, API, CLI, deployment, and configuration workflows where possible to ensure documentation is practical and usable.</li>
+                <li>Improve documentation based on product releases, support feedback, customer issues, and user needs.</li>
+              </ul>
+
+              <h3>Domains I Have Worked Across</h3>
+
               <div class="tag-list">
                 <span class="tag">Electronics</span>
                 <span class="tag">Embedded Systems</span>
                 <span class="tag">Semiconductor</span>
                 <span class="tag">Enterprise Networking</span>
+                <span class="tag">Security Products</span>
                 <span class="tag">Cloud</span>
                 <span class="tag">Virtualization</span>
                 <span class="tag">Telecom RAN</span>
+                <span class="tag">4G/5G</span>
+                <span class="tag">Cloud RAN</span>
                 <span class="tag">Database Concepts</span>
                 <span class="tag">Fintech</span>
-                <span class="tag">Security Products</span>
+                <span class="tag">Enterprise Software</span>
               </div>
             </div>
 
             <div class="quick-facts">
               <div class="fact">
-                <strong>15+ years</strong>
-                <span>Technical writing and documentation ownership</span>
+                <strong>40% Production Issue Reduction</strong>
+                <span>RCA write-ups, issue analysis, process documentation, and preventive documentation improvements.</span>
               </div>
 
               <div class="fact">
-                <strong>Cross-domain experience</strong>
-                <span>Hardware, software, cloud, networking, telecom, fintech, and enterprise products</span>
+                <strong>65% Litigation Case Reduction</strong>
+                <span>Improved process documentation, workflow clarity, audit evidence, and operational guidance.</span>
               </div>
 
               <div class="fact">
-                <strong>Documentation engineering</strong>
-                <span>Structured content, Git workflows, HTML5 help, DITA/XML, and reusable documentation</span>
+                <strong>40% Customer Ticket Reduction</strong>
+                <span>Troubleshooting guides, FAQs, KB articles, configuration notes, and self-service content.</span>
               </div>
 
               <div class="fact">
-                <strong>End-to-end ownership</strong>
-                <span>Planning, authoring, review, validation, publishing, and maintenance</span>
+                <strong>Documentation Modernization</strong>
+                <span>Legacy documentation migrated into structured, searchable, reusable HTML5 online help.</span>
+              </div>
+
+              <div class="fact">
+                <strong>Performance Recognition</strong>
+                <span>Best Performer / Spot Awards and HCL Live Wire Award for documentation ownership and delivery impact.</span>
               </div>
             </div>
+
           </div>
         </section>
 
@@ -609,128 +716,128 @@
 
         <!-- Skills -->
         <section id="skills">
-  <h2>Skills</h2>
+          <h2>Skills</h2>
 
-  <div class="skill-section">
-    <h3>Core Skills</h3>
-    <p>
-      Technical communication | Documentation strategy | Information architecture |
-      Product documentation | Structured writing | Topic-based authoring | Content design |
-      UX writing | Documentation ownership | SME collaboration | Technical validation |
-      Customer-focused writing | Release-aligned documentation | Documentation modernization |
-      Content reuse | Documentation quality improvement
-    </p>
-  </div>
+          <div class="skill-section">
+            <h3>Core Skills</h3>
+            <p>
+              Technical communication | Documentation strategy | Information architecture |
+              Product documentation | Structured writing | Topic-based authoring | Content design |
+              UX writing | Documentation ownership | SME collaboration | Technical validation |
+              Customer-focused writing | Release-aligned documentation | Documentation modernization |
+              Content reuse | Documentation quality improvement
+            </p>
+          </div>
 
-  <div class="skill-section">
-    <h3>Technical Publication</h3>
+          <div class="skill-section">
+            <h3>Technical Publication</h3>
 
-    <div class="skill-subsection">
-      <h4>Engineering & Product Documentation</h4>
-      <p>
-        Hardware user manuals | Software user manuals | Firmware upgrade guides |
-        System user manuals | Feature descriptions | Requirements documentation |
-        Datasheets | Design documents | Architecture workflows | Block diagrams |
-        System workflows | Technical notes | Field service bulletins |
-        Installation guides | Deployment guides | Configuration guides | Maintenance manuals
-      </p>
-    </div>
+            <div class="skill-subsection">
+              <h4>Engineering & Product Documentation</h4>
+              <p>
+                Hardware user manuals | Software user manuals | Firmware upgrade guides |
+                System user manuals | Feature descriptions | Requirements documentation |
+                Datasheets | Design documents | Architecture workflows | Block diagrams |
+                System workflows | Technical notes | Field service bulletins |
+                Installation guides | Deployment guides | Configuration guides | Maintenance manuals
+              </p>
+            </div>
 
-    <div class="skill-subsection">
-      <h4>Quality, Test & Review Documentation</h4>
-      <p>
-        Quality manuals | Test reports | Qualification test procedures |
-        Acceptance test procedures | Traceability matrix documents | Review checklists |
-        Audit evidence | Review evidence | Release documentation
-      </p>
-    </div>
+            <div class="skill-subsection">
+              <h4>Quality, Test & Review Documentation</h4>
+              <p>
+                Quality manuals | Test reports | Qualification test procedures |
+                Acceptance test procedures | Traceability matrix documents | Review checklists |
+                Audit evidence | Review evidence | Release documentation
+              </p>
+            </div>
 
-    <div class="skill-subsection">
-      <h4>Issue, Improvement & Risk Documentation</h4>
-      <p>
-        RCA write-ups | Issue analysis documents | CAPA documentation |
-        Process improvement reports | Change management documentation |
-        Configuration management documentation | FMEA documentation
-      </p>
-    </div>
+            <div class="skill-subsection">
+              <h4>Issue, Improvement & Risk Documentation</h4>
+              <p>
+                RCA write-ups | Issue analysis documents | CAPA documentation |
+                Process improvement reports | Change management documentation |
+                Configuration management documentation | FMEA documentation
+              </p>
+            </div>
 
-    <div class="skill-subsection">
-      <h4>API, CLI & Developer Documentation</h4>
-      <p>
-        REST API documentation | CLI administrator guides | Developer documentation |
-        SDK workflow documentation | Command reference guides | Integration guides |
-        Request and response examples | Error responses | Validation steps |
-        Troubleshooting documentation
-      </p>
-    </div>
+            <div class="skill-subsection">
+              <h4>API, CLI & Developer Documentation</h4>
+              <p>
+                REST API documentation | CLI administrator guides | Developer documentation |
+                SDK workflow documentation | Command reference guides | Integration guides |
+                Request and response examples | Error responses | Validation steps |
+                Troubleshooting documentation
+              </p>
+            </div>
 
-    <div class="skill-subsection">
-      <h4>Enablement Documentation</h4>
-      <p>
-        Training guides | Product walkthroughs | Technical presentations |
-        Video tutorials | Knowledge transfer content | User onboarding content
-      </p>
-    </div>
-  </div>
+            <div class="skill-subsection">
+              <h4>Enablement Documentation</h4>
+              <p>
+                Training guides | Product walkthroughs | Technical presentations |
+                Video tutorials | Knowledge transfer content | User onboarding content
+              </p>
+            </div>
+          </div>
 
-  <div class="skill-section">
-    <h3>Tools, Platforms & Standards</h3>
+          <div class="skill-section">
+            <h3>Tools, Platforms & Standards</h3>
 
-    <div class="skill-subsection">
-      <h4>Authoring & Editing</h4>
-      <p>
-        MadCap Flare | Adobe FrameMaker | Oxygen XML Editor | Microsoft Office |
-        Adobe Acrobat | VS Code | Acrolinx
-      </p>
-    </div>
+            <div class="skill-subsection">
+              <h4>Authoring & Editing</h4>
+              <p>
+                MadCap Flare | Adobe FrameMaker | Oxygen XML Editor | Microsoft Office |
+                Adobe Acrobat | VS Code | Acrolinx
+              </p>
+            </div>
 
-    <div class="skill-subsection">
-      <h4>CCMS & Structured Content</h4>
-      <p>
-        IXIASOFT CCMS | DITA XML | XML authoring | Topic-based writing |
-        Content reuse | Review workflows
-      </p>
-    </div>
+            <div class="skill-subsection">
+              <h4>CCMS & Structured Content</h4>
+              <p>
+                IXIASOFT CCMS | DITA XML | XML authoring | Topic-based writing |
+                Content reuse | Review workflows
+              </p>
+            </div>
 
-    <div class="skill-subsection">
-      <h4>Documentation Platforms</h4>
-      <p>
-        Jira | Confluence | SharePoint | GitHub | GitLab | Bugzilla
-      </p>
-    </div>
+            <div class="skill-subsection">
+              <h4>Documentation Platforms</h4>
+              <p>
+                Jira | Confluence | SharePoint | GitHub | GitLab | Bugzilla
+              </p>
+            </div>
 
-    <div class="skill-subsection">
-      <h4>Markup & Docs-as-Code</h4>
-      <p>
-        HTML | CSS | XML | DITA | Markdown | MDX | AsciiDoc | YAML | JSON |
-        Python basics
-      </p>
-    </div>
+            <div class="skill-subsection">
+              <h4>Markup & Docs-as-Code</h4>
+              <p>
+                HTML | CSS | XML | DITA | Markdown | MDX | AsciiDoc | YAML | JSON |
+                Python basics
+              </p>
+            </div>
 
-    <div class="skill-subsection">
-      <h4>API & Developer Tools</h4>
-      <p>
-        Swagger | OpenAPI | Postman | Mintlify | Markdown/MDX output validation
-      </p>
-    </div>
+            <div class="skill-subsection">
+              <h4>API & Developer Tools</h4>
+              <p>
+                Swagger | OpenAPI | Postman | Mintlify | Markdown/MDX output validation
+              </p>
+            </div>
 
-    <div class="skill-subsection">
-      <h4>Visual & Multimedia Tools</h4>
-      <p>
-        Visio | Draw.io | Lucidchart | Snagit | Adobe Illustrator | CorelDRAW |
-        Camtasia
-      </p>
-    </div>
+            <div class="skill-subsection">
+              <h4>Visual & Multimedia Tools</h4>
+              <p>
+                Visio | Draw.io | Lucidchart | Snagit | Adobe Illustrator | CorelDRAW |
+                Camtasia
+              </p>
+            </div>
 
-    <div class="skill-subsection">
-      <h4>Standards & Specifications</h4>
-      <p>
-        Microsoft Writing Style Guide | IEEE 829 | MIL-STD-498 |
-        JSS 0251-01:2002 | RTCA/DO-254
-      </p>
-    </div>
-  </div>
-</section>
+            <div class="skill-subsection">
+              <h4>Standards & Specifications</h4>
+              <p>
+                Microsoft Writing Style Guide | IEEE 829 | MIL-STD-498 |
+                JSS 0251-01:2002 | RTCA/DO-254
+              </p>
+            </div>
+          </div>
+        </section>
 
         <!-- Projects -->
         <section id="projects">
@@ -977,8 +1084,9 @@
 
           <div class="contact-card">
             <p>
-              I am open to Senior Technical Writer, Lead Technical Writer, Documentation Engineer,
-              API Writer, Cloud Documentation Writer, Information Developer, and Technical Publications roles.
+              I am open to Senior Technical Writer, Lead Technical Writer, Product Documentation Lead,
+              Documentation Engineer, API Writer, Cloud Documentation Writer, Information Developer,
+              and Technical Publications roles.
             </p>
 
             <p>
@@ -997,7 +1105,7 @@
       </div>
 
       <footer>
-        © 2026 Jansirani Vijayan. Portfolio under construction. Selected samples are sanitized for confidentiality.
+        © 2026 Jansirani V. Portfolio under construction. Selected samples are sanitized for confidentiality.
       </footer>
     </main>
 
