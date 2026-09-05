@@ -499,10 +499,36 @@
 
     @media (max-width: 850px) {
       
-      .about-actions {
-        position: static;
-        margin-bottom: 24px;
-      }
+      .about-top-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.about-top-actions .button {
+  margin-top: 0;
+  padding: 9px 13px;
+  font-size: 14px;
+}
+
+.secondary-button {
+  background: #fff7ed;
+  color: #7a3d25;
+  box-shadow: 0 4px 12px rgba(31, 41, 51, 0.05);
+}
+
+.secondary-button:hover {
+  background: #f3e5dc;
+}
+
+@media (max-width: 850px) {
+  .about-top-actions {
+    justify-content: flex-start;
+    margin-bottom: 22px;
+  }
+}
 
       .about-actions .button {
         width: auto;
@@ -605,13 +631,14 @@
 
         <!-- About -->
         <section id="about">
-          <div class="about-wrap">
 
             <div class="about-actions">
               <a class="button" href="https://github.com/Jansirani-vijayan/technical_writing_portfolio" target="_blank">GitHub</a>
               <a class="button secondary-button" href="https://www.linkedin.com/in/jansirani-vijayan-6b5756aa/" target="_blank">LinkedIn</a>
               <a class="button secondary-button" href="mailto:jansiranivijayan@gmail.com">Email</a>
             </div>
+         
+          <div class="about-wrap">         
 
             <div class="about-main">
               <h1 class="about-name">JANSIRANI V</h1>
