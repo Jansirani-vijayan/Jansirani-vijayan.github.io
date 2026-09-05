@@ -453,47 +453,44 @@
       font-size: 14px;
     }
 
+    /* About top buttons */
+
+    .about-top-actions {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    
+    .about-top-actions .button {
+      background: #7a3d25;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(31, 41, 51, 0.08);
+      margin-top: 0;
+      padding: 9px 14px;
+      font-size: 14px;
+      border-radius: 8px;
+      font-weight: 800;
+    }
+    
+    .about-top-actions .button:hover {
+      background: #5f2f1d;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
     /* Mobile */
 
     @media (max-width: 850px) {
-      
-.about-top-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-}
 
-.about-top-actions .button {
-  background: #7a3d25;
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(31, 41, 51, 0.08);
-  margin-top: 0;
-  padding: 9px 14px;
-  font-size: 14px;
-  border-radius: 8px;
-  font-weight: 800;
-}
-
-.about-top-actions .button:hover {
-  background: #5f2f1d;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-@media (max-width: 850px) {
-  .about-top-actions {
-    justify-content: flex-start;
-    margin-bottom: 22px;
-  }
-}
-
-      .about-actions .button {
-        width: auto;
+      about-top-actions {
+        justify-content: flex-start;
+        margin-bottom: 22px;
       }
-      
-      .layout {
+
+     .layout {
         display: block;
       }
 
