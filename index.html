@@ -102,14 +102,20 @@
       margin: 22px 0;
     }
 
+    .nav {
+      text-align: center;
+    }
+
     .nav a {
       display: block;
-      color: #b8c0c7;
-      padding: 8px 12px;
-      margin-bottom: 4px;
+      color: #c5cbd1;
+      padding: 7px 10px;
+      margin-bottom: 8px;
       border-radius: 8px;
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
     }
 
     .nav a:hover {
@@ -213,10 +219,36 @@
   }
 
     .about-wrap {
-      display: grid;
-      grid-template-columns: minmax(520px, 1fr) 360px;
-      gap: 48px;
-      align-items: start;
+       display: grid;
+       grid-template-columns: minmax(560px, 1fr) 360px;
+       gap: 42px;
+       align-items: start;
+       position: relative;
+    }
+
+    .about-actions {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .about-actions .button {
+      margin-top: 0;
+      padding: 9px 13px;
+      font-size: 14px;
+    }
+
+    .secondary-button {
+      background: #fff7ed;
+      color: #7a3d25;
+      box-shadow: 0 4px 12px rgba(31, 41, 51, 0.05);
+    }
+
+    .secondary-button:hover {
+      background: #f3e5dc;
     }
 
     .about-name {
@@ -466,6 +498,16 @@
     /* Mobile */
 
     @media (max-width: 850px) {
+      
+      .about-actions {
+        position: static;
+        margin-bottom: 24px;
+      }
+
+      .about-actions .button {
+        width: auto;
+      }
+      
       .layout {
         display: block;
       }
@@ -565,6 +607,12 @@
         <section id="about">
           <div class="about-wrap">
 
+            <div class="about-actions">
+              <a class="button" href="https://github.com/Jansirani-vijayan/technical_writing_portfolio" target="_blank">GitHub</a>
+              <a class="button secondary-button" href="https://www.linkedin.com/in/jansirani-vijayan-6b5756aa/" target="_blank">LinkedIn</a>
+              <a class="button secondary-button" href="mailto:jansiranivijayan@gmail.com">Email</a>
+            </div>
+
             <div class="about-main">
               <h1 class="about-name">JANSIRANI V</h1>
               <div class="title-line"></div>
@@ -583,13 +631,7 @@
                 <strong>usable documentation that supports product adoption, customer self-service,
                 and release readiness.</strong>
               </p>
-
-              <div class="about-actions">
-                <a class="button" href="https://github.com/Jansirani-vijayan/technical_writing_portfolio" target="_blank">GitHub Portfolio</a>
-                <a class="button secondary-button" href="https://www.linkedin.com/in/jansirani-vijayan-6b5756aa/" target="_blank">LinkedIn</a>
-                <a class="button secondary-button" href="mailto:jansiranivijayan@gmail.com">Email</a>
-              </div>
-
+             
               <div class="construction-note">
                 Portfolio under construction — detailed case studies and selected work samples are being refined.
               </div>
