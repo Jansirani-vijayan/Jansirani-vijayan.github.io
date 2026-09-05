@@ -137,9 +137,10 @@
     }
 
     .container {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 54px 42px;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 54px 56px 54px 36px;
     }
 
     section {
@@ -196,8 +197,8 @@
 
     .about-wrap {
       display: grid;
-      grid-template-columns: 1.55fr 0.95fr;
-      gap: 42px;
+      grid-template-columns: minmax(520px, 1fr) 360px;
+      gap: 48px;
       align-items: start;
     }
 
@@ -287,18 +288,18 @@
     }
 
     .quick-facts {
-      border-left: none;
-      padding-left: 0;
+      border-left: 1px solid #ead2c3;
+      padding-left: 28px;
       display: grid;
       gap: 14px;
     }
 
     .fact {
-      background: var(--accent-soft);
+      background: #fff8f1;
       border: none;
-      border-radius: 16px;
+      border-radius: 18px;
       padding: 16px 18px;
-      box-shadow: 0 6px 18px rgba(31, 41, 51, 0.06);
+      box-shadow: 0 8px 18px rgba(31, 41, 51, 0.06);
     }
 
     .fact strong {
@@ -504,6 +505,11 @@
       .button {
         text-align: center;
       }
+
+      .quick-facts {
+        border-left: none;
+        padding-left: 0;
+      }
     }
   </style>
 </head>
@@ -535,7 +541,6 @@
       <div class="sidebar-line"></div>
 
       <div class="sidebar-links">
-        <a href="JansiraniV_Technical_Writer_Resume_2026.docx" target="_blank">Resume</a>
         <a href="https://github.com/Jansirani-vijayan/technical_writing_portfolio" target="_blank">GitHub Portfolio</a>
         <a href="https://www.linkedin.com/in/jansirani-vijayan-6b5756aa/" target="_blank">LinkedIn</a>
         <a href="mailto:jansiranivijayan@gmail.com">Email</a>
@@ -1097,7 +1102,6 @@
               <a class="button" href="mailto:jansiranivijayan@gmail.com">Email Me</a>
               <a class="button" href="https://www.linkedin.com/in/jansirani-vijayan-6b5756aa/" target="_blank">LinkedIn</a>
               <a class="button" href="https://github.com/Jansirani-vijayan/technical_writing_portfolio" target="_blank">GitHub Portfolio</a>
-              <a class="button" href="JansiraniV_Technical_Writer_Resume_2026.docx" target="_blank">Resume</a>
             </div>
           </div>
         </section>
